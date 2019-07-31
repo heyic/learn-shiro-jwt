@@ -1,15 +1,17 @@
-server:
-    port: 8888
-    ssl:
-        key-store: "classpath:keystore.jks"
-        key-store-password: "123456"
-        key-password: "123456"
+spring:
+    profiles:
+        active: swagger,dev
+    application:
+        name: yche
 
-swagger:
-    enabled: true
-    title: "学习shiro+jwt接口文档"
-    version: "1.0"
-    contact:
-        name: "hyc"
-        email: "yche.com"
-    base-package: "com.hyc.controller"
+
+# jwt配置
+jwt:
+    auth-header: Authorization
+    expiredIn: 120
+    refreshIn: 10080
+    secret: yche4
+
+logging:
+    level:
+        ROOT: info

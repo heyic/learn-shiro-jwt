@@ -1,0 +1,10 @@
+swagger:
+    enabled: true
+    title: "学习shiro+jwt接口文档"
+    version: "1.0"
+    contact:
+        name: "hyc"
+        email: "yche.com"
+    base-package: "com.hyc.controller"
+    authorization:
+        key-name: Authorization

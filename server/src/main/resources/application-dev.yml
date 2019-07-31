@@ -1,0 +1,40 @@
+server:
+    port: 8888
+#    ssl:
+#        key-store: "classpath:keystore.jks"
+#        key-store-password: "123456"
+#        key-password: "123456"
+spring:
+    datasource:
+        url: jdbc:mysql://192.168.86.163:3306/yhe?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: incubation
+        password: '@bXlzcWwxNjNpbmN1YmF0aW9u'
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        initialSize: 1
+        maxActive: 20
+        minIdle: 1
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        filters: stat
+    jpa:
+        hibernate:
+            ddl-auto: update
+    redis:
+        database: 0
+        host: 192.168.86.163
+        port: 6380
+        password: vSQpDKBAbRvXRkAm/LXaWiohgVT9XAt6BAHt93yYxPw=
+        timeout: 200S
+        jedis:
+            pool:
+                max-active: 8
+                max-wait: 1
+                max-idle: 8
+                min-idle: 0
