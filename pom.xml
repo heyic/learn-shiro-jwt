@@ -18,7 +18,6 @@
     <modules>
         <module>commons</module>
         <module>server</module>
-        <module>ui</module>
     </modules>
 
     <dependencies>
