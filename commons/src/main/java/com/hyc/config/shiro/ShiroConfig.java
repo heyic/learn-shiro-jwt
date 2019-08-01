@@ -107,8 +107,10 @@ public class ShiroConfig {
         filterChains.put("/swagger-resources/**", "anon");
         filterChains.put("/favicon.ico", "anon");
 
-        //druid控制台接口权限开发
+        //druid控制台接口权限开放
+        filterChains.put("/druid/**", "anon");
         filterChains.put("/druid/sql.json", "anon");
+        filterChains.put("/druid/submitLogin", "anon");
 
 
         filterChains.put("/**", "jwtAuthc");
